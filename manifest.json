@@ -1,0 +1,51 @@
+{
+	"name": "Webcomic Keyboard Navigation",
+	"description": "Adds keyboard navigation to various webcomics.",
+	"version": "0.2",
+	"content_scripts" : [{
+		"matches" : [
+			"http://*.sinfest.net/*",
+			"http://*.cad-comic.com/*",
+			"http://*.xkcd.com/*",
+			"http://*.awkwardzombie.com/*",
+			"http://*.oglaf.com/*",
+			"http://*.samandfuzzy.com/*",
+			"http://*.penny-arcade.com/*",
+			"http://*.lfgcomic.com/*",
+			"http://*.leasticoulddo.com/*",
+			"http://*.pvponline.com/*",
+			"http://*.misfile.com/*",
+			"http://*.girlswithslingshots.com/*",
+			"http://*.twolumps.net/*",
+			"http://*.chainsawsuit.com/*",
+			"http://*.direman.com/*",
+			"http://*.amultiverse.com/*",
+			"http://*.drmcninja.com/*",
+			"http://*.gunnerkrigg.com/*",
+			"http://*.candicomics.com/*",
+			"http://*.threepanelsoul.com/*",
+			"http://*.shortpacked.com/*",
+			"http://*.dumbingofage.com/*",
+			"http://*.ma3comic.com/*",
+			"http://*.buttersafe.com/*",
+			"http://*.dcisgoingtohell.com/*",
+			"http://twokinds.keenspot.com/*",
+			"http://*.dresdencodak.com/*",
+			"http://*.giantitp.com/*",
+			"http://*.wastedtalent.ca/*",
+			"http://*.darthsanddroids.net/*"
+		],
+		"js" : [
+			"wckf.js",
+			"jQuery.js",
+			"list.js"
+		],
+		"run_at" : "document_idle",
+		"all_frames" : false
+	}],
+	"icons": {
+		"48": "icon-48.png",
+		"128": "icon-128.png"
+	},
+	"manifest_version": 2
+}
