@@ -48,7 +48,8 @@
 		],
 		"js" : [
 			"wckf.js",
-			"jQuery.js"
+			"jQuery.js",
+			"list.js"
 		],
 		"run_at" : "document_idle",
 		"all_frames" : false

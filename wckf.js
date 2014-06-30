@@ -1,9 +1,9 @@
 /** WcKS Framework */
-wckf = {
+ksf = {
 	'bind':function(shortcuts){
 		function closure(e){
 			var cf = document.activeElement.nodeName;
-			var element = (e.keyCode==wckf.direction.l)?shortcuts.prev:(e.keyCode==wckf.direction.r)?shortcuts.next:null;
+			var element = (e.keyCode==ksf.direction.l)?shortcuts.prev:(e.keyCode==ksf.direction.r)?shortcuts.next:null;
 			if((e.keyCode==37||e.keyCode==39)&&!(cf=="INPUT"||cf=="TEXTAREA")){
 				e.preventDefault();
 				$(element)[0].click();
@@ -20,16 +20,16 @@ wckf = {
 		storage.get('sites',function(items){
 			var stuff = items.sites;
 			for(var p in stuff){
-				var reg = new RegExp(wckf.escape(p)+"$");
+				var reg = new RegExp(ksf.escape(p)+"$");
 				if(reg.test(document.domain)){
 					if(!(stuff[p].hasOwnProperty("path")) || document.location.pathname.indexOf(stuff[p]['path'])==0){
 						storage.get('direction',function(items){
 							if(items.direction=="r"){
-								wckf.direction.l = 39;
-								wckf.direction.r = 37;
+								ksf.direction.l = 39;
+								ksf.direction.r = 37;
 							}
 						});
-						wckf.bind(stuff[p]['shortcuts']);
+						ksf.bind(stuff[p]['shortcuts']);
 					}
 				}
 			}
@@ -43,4 +43,3 @@ wckf = {
 		'r':39
 	}
 }
-wckf.apply();
