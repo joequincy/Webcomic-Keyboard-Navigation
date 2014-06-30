@@ -3,8 +3,8 @@ var ksList = {
 		'domain':"sinfest.net",
 		'path':"/view.php",
 		'shortcuts':{
-			'Right':$("img[src='../images/next.gif']").parent()[0],
-			'Left':$("img[src='../images/prev.gif']").parent()[0]
+			'prev':"img[src='../images/prev.gif']",
+			'next':"img[src='../images/next.gif']"
 		}
 	},
 	'CAD':{
@@ -221,6 +221,13 @@ var ksList = {
 		'shortcuts':{
 			'Right':$("div.center>p>a.darth:contains('NEXT>')")[0],
 			'Left':$("div.center>p>a.darth:contains('<PREVIOUS')")[0]
+		}
+	},
+	'PiledHigherAndDeeper':{
+		'domain':"phdcomics.com",
+		'shortcuts':{
+			'Right':$("img[src='images/next_button.gif']").parent()[0],
+			'Left':$("img[src='images/prev_button.gif'],img[src='comics/images/prev_button.gif']").parent()[0]
 		}
 	}
 }

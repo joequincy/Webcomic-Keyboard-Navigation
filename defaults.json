@@ -1,0 +1,241 @@
+{
+	"0.1":{
+		"sinfest.net":{
+			"name":"Sinfest",
+			"path":"/view.php",
+			"shortcuts":{
+				"prev":"img[src='../images/prev.gif']",
+				"next":"img[src='../images/next.gif']"
+			}
+		},
+		"www.cad-comic.com":{
+			"name":"Ctrl-Alt-Del",
+			"shortcuts":{
+				"prev":"div.navigation>a.nav-back,a#cad-button-link",
+				"next":"div.navigation>a.nav-next"
+			}
+		},
+		"xkcd.com":{
+			"name":"XKCD",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"www.awkwardzombie.com":{
+			"name":"Awkward Zombie",
+			"shortcuts":{
+				"prev":"img[alt='Previous Comic']",
+				"next":"img[alt='Next Comic']"
+			}
+		}
+	},
+	"0.2":{
+		"oglaf.com":{
+			"name":"Oglaf",
+			"shortcuts":{
+				"prev":"div#pvs",
+				"next":"div#nx"
+			}
+		},
+		"samandfuzzy.com":{
+			"name":"Sam and Fuzzy",
+			"shortcuts":{
+				"prev":"li.prev-page>a",
+				"next":"li.next-page>a"
+			}
+		},
+		"penny-arcade.com":{
+			"name":"Penny Arcade",
+			"shortcuts":{
+				"prev":"a.btnPrev,li#heroPA>a",
+				"next":"a.btnNext"
+			}
+		},
+		"lfgcomic.com":{
+			"name":"Looking For Group",
+			"path":"/page/",
+			"shortcuts":{
+				"prev":"div#comic-left>a",
+				"next":null
+			}
+		},
+		"leasticoulddo.com":{
+			"name":"Least I Could Do",
+			"shortcuts":{
+				"prev":"a#nav-large-prev,a#feature-comic",
+				"next":"a#nav-large-next"
+			}
+		},
+		"pvponline.com":{
+			"name":"PVP",
+			"shortcuts":{
+				"prev":"div.comic-nav>a,section.marquee>a.primary",
+				"next":"div.comic-nav>a:nth-of-type(2)"
+			}
+		},
+		"misfile.com":{
+			"name":"Misfile",
+			"shortcuts":{
+				"prev":"div#navtop img[alt='Previous Comic']",
+				"next":"div#navtop img[alt='Next Comic']"
+			}
+		},
+		"girlswithslingshots.com":{
+			"name":"Girls With Slingshots",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"twolumps.net":{
+			"name":"Two Lumps",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"chainsawsuit.com":{
+			"name":"chainsawsuit",
+			"shortcuts":{
+				"prev":"img[alt='previous']",
+				"next":"img[alt='next']"
+			}
+		},
+		"direman.com":{
+			"name":"Dave the Direman",
+			"shortcuts":{
+				"prev":"a:contains('Previous')",
+				"next":"a:contains('Next')"
+			}
+		},
+		"amultiverse.com":{
+			"name":"Scenes From A Multiverse",
+			"shortcuts":{
+				"prev":"a.navi-prev",
+				"next":"a.navi-next"
+			}
+		},
+		"drmcninja.com":{
+			"name":"Dr. McNinja",
+			"shortcuts":{
+				"prev":"a.prev",
+				"next":"a.next"
+			}
+		},
+		"gunnerkrigg.com":{
+			"name":"Gunnerkrigg Court",
+			"shortcuts":{
+				"prev":"img[src='http://www.gunnerkrigg.com/images/prev_a.jpg']",
+				"next":"img[src='http://www.gunnerkrigg.com/images/next_a.jpg']"
+			}
+		},
+		"candicomics.com":{
+			"name":"Candi",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"threepanelsoul.com":{
+			"name":"Three Panel Soul",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"shortpacked.com":{
+			"name":"Shortpacked!",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"dumbingofage.com":{
+			"name":"Dumbing Of Age",
+			"shortcuts":{
+				"prev":"a.navi-prev",
+				"next":"a.navi-next"
+			}
+		},
+		"ma3comic.com":{
+			"name":"M&eacute;nage &agrave; 3",
+			"shortcuts":{
+				"prev":"img[alt='Previous comic']",
+				"next":"a#cndnext"
+			}
+		},
+		"buttersafe.com":{
+			"name":"Buttersafe",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"dcisgoingtohell.com":{
+			"name":"Darwin Carmichael Is Going To Hell",
+			"shortcuts":{
+				"prev":"a.navi-prev",
+				"next":"a.navi-next"
+			}
+		},
+		"twokinds.keenspot.com":{
+			"name":"Two Kinds",
+			"shortcuts":{
+				"prev":"a.navprev,a#cg_back",
+				"next":"a.navnext,a#cg_next,a#cg_last"
+			}
+		},
+		"dresdencodak.com":{
+			"name":"Dresden Codak",
+			"shortcuts":{
+				"prev":"div#preview>a,div.menunav>a",
+				"next":"img[src='http://dresdencodak.com_m_next.png']"
+			}
+		},
+		"giantitp.com":{
+			"name":"Order of the Stick",
+			"shortcuts":{
+				"prev":"img[alt='Previous Comic']",
+				"next":"img[alt='Next Comic']"
+			}
+		},
+		"wastedtalent.ca":{
+			"name":"Wasted Talent",
+			"shortcuts":{
+				"prev":"a.comic_prev",
+				"next":"a.comic_next"
+			}
+		},
+		"darthsanddroids.net":{
+			"name":"Darths and Droids",
+			"shortcuts":{
+				"prev":"div.center>p>a.darth:contains('<PREVIOUS')",
+				"next":"div.center>p>a.darth:contains('NEXT>')"
+			}
+		}
+	},
+	"0.3":{
+		"phdcomics.com":{
+			"name":"Piled Higher and Deeper",
+			"shortcuts":{
+				"prev":"img[src='images/prev_button.gif'],img[src='comics/images/prev_button.gif']",
+				"next":"img[src='images/next_button.gif']"
+			}
+		},
+		"octopuspie.com":{
+			"name":"octopus pie",
+			"shortcuts":{
+				"prev":"a[rel='prev']",
+				"next":"a[rel='next']"
+			}
+		},
+		"feltonblack.com":{
+			"name":"Felton Black",
+			"shortcuts":{
+				"prev":"a#prev",
+				"next":"a#next"
+			}
+		}
+	}
+}

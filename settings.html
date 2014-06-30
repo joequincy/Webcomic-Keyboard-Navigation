@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Options - WKN</title>
+	<style type="text/css">
+		html, body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			}
+
+		section#wckf-sidebar {
+			position: fixed;
+			top: 0px;
+			left: 0px;
+			width: 300px;
+			}
+		section#wckf-sidebar>img {
+			float: left;
+			margin: 15px;
+			}
+		section#wckf-sidebar>h1 {
+			margin-top: 60px;
+			margin-bottom: 65px;
+			font-size: 2em;
+			}
+		section#wckf-sidebar fieldset {
+			border: none;
+			}
+
+		section#wckf-main {
+			margin-left: 300px;
+			width: auto;
+			border-left: 2px solid #000000;
+			min-height: 100%;
+			overflow: auto;
+			}
+		section#wckf-main article {
+			margin-left: 15px;
+			border-bottom: 1px solid #d6d6d6;
+			}
+		section#wckf-main article h1 {
+			margin-bottom: 0px;
+			font-family: Tahoma, Geneva, sans-serif;
+			font-size: 18pt;
+			}
+		section#wckf-main article legend {
+			font-family: "Courier New", Courier, monospace;
+			font-size: 10pt;
+			color: #666666;
+			}
+		section#wckf-main label {
+			display: inline-block;
+			width: 85px;
+			}
+	</style>
+</head>
+<body id="wckf-body">
+	<section id="wckf-sidebar">
+		<form name="settings">
+		<img src="icon-128.png">
+		<h1>Options</h1>
+		<article id="wckf-switches">
+			<fieldset>
+				<legend>Forced navigation direction? <input type="checkbox" name="forceDir" /></legend>
+				<input type="radio" name="direction" value="l" />&#8592; Previous &mdash; Next &#8594;<br>
+				<input type="radio" name="direction" value="r" />&#8592; Next &mdash; Previous &#8594;
+			</fieldset>
+		</article>
+		<input type="button" id="wckf-save" value="Save" /><input type="button" id="wckf-factory" value="Reset to Defaults" />
+		</form>
+	</section>
+	<section id="wckf-main">
+		<article>
+			<h1>Add a new comic</h1>
+			<form name="newSite">
+				<ul>
+					<li><label>Site Address:</label><input name="url" size=100 /></li>
+					<li><label>Comic Title:</label><input name="name" size=100 /></li>
+					<li><label>Previous:</label><input name="prev" size=100 /></li>
+					<li><label>Next:</label><input name="next" size=100 /></li>
+				</ul>
+			</form>
+			<input id="wckf-addNew" type="button" value="Add" />
+		</article>
+	</section>
+	<script src="settings.js"></script>
+</body>

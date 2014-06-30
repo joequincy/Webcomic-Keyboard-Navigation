@@ -1,7 +1,15 @@
 {
-	"name": "Webcomic Keyboard Navigation",
-	"description": "Adds keyboard navigation to various webcomics.",
-	"version": "0.2",
+	"name" : "Webcomic Keyboard Navigation",
+	"description" : "Adds keyboard navigation to various webcomics.",
+	"version" : "0.3",
+	"permissions" : [
+		"storage"
+	],
+	"options_page" : "settings.html",
+	"background" : {
+		"scripts" : ["install.js"],
+		"persistent" : false
+	},
 	"content_scripts" : [{
 		"matches" : [
 			"http://*.sinfest.net/*",
@@ -33,7 +41,10 @@
 			"http://*.dresdencodak.com/*",
 			"http://*.giantitp.com/*",
 			"http://*.wastedtalent.ca/*",
-			"http://*.darthsanddroids.net/*"
+			"http://*.darthsanddroids.net/*",
+			"http://*.phdcomics.com/*",
+			"http://*.octopuspie.com/*",
+			"http://*.feltonblack.com/*"
 		],
 		"js" : [
 			"wckf.js",
