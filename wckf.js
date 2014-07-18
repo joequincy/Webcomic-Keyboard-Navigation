@@ -30,6 +30,11 @@ wckf = {
 							}
 						});
 						wckf.bind(stuff[p]['shortcuts']);
+						storage.get('pageAction',function(items){
+							if(!items.pageAction==false){
+								chrome.runtime.sendMessage("show_page_action");
+							}
+						});
 					}
 				}
 			}

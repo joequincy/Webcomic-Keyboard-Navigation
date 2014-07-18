@@ -1,9 +1,8 @@
 function loadDefaults(version){
 	var xhr = new XMLHttpRequest();
 	xhr.onload = function(){
-		//chrome.storage.sync.set({'sites':xhr.response});
-		chrome.storage.sync.get('sites', function(items){
-			mergeDefaults(xhr.response, items.sites, version);
+		chrome.storage.sync.get(['sites','pageAction'], function(items){
+			mergeDefaults(xhr.response, items, version);
 		});
 	};
 	xhr.open("GET", chrome.extension.getURL('defaults.json'), true);
@@ -11,7 +10,7 @@ function loadDefaults(version){
 	xhr.send();
 }
 
-function mergeDefaults(defaults, userSettings, version){
+function mergeDefaults(defaults, items, version){
 	/* Merges any new site settings without overwriting any user-created settings.
 	"defaults" example structure: {
 		"0.1" : {
@@ -25,6 +24,8 @@ function mergeDefaults(defaults, userSettings, version){
 			},...
 		},...
 	*/
+	var userSettings = items.sites;
+	var pageAction = (typeof(items.pageAction)==undefined)?true:items.pageAction;
 	if(typeof(userSettings)=="undefined"){
 		userSettings = {};
 	}
@@ -42,7 +43,8 @@ function mergeDefaults(defaults, userSettings, version){
 	}
 	chrome.storage.sync.set({
 		'sites':userSettings,
-		'version':currentVersion
+		'version':currentVersion,
+		'pageAction':pageAction
 	});
 }
 	
@@ -56,4 +58,9 @@ chrome.runtime.onInstalled.addListener(function() {
 			loadDefaults(0);
 		}
 	});
+});
+chrome.runtime.onMessage.addListener(function (message, sender) {
+	if (message == "show_page_action") {
+		chrome.pageAction.show(sender.tab.id);
+	}
 });

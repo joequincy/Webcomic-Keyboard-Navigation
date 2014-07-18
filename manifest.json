@@ -1,7 +1,7 @@
 {
 	"name" : "Webcomic Keyboard Navigation",
 	"description" : "Adds keyboard navigation to various webcomics.",
-	"version" : "0.4",
+	"version" : "0.5",
 	"permissions" : [
 		"storage"
 	],
@@ -11,41 +11,7 @@
 		"persistent" : false
 	},
 	"content_scripts" : [{
-		"matches" : [
-			"http://*.sinfest.net/*",
-			"http://*.cad-comic.com/*",
-			"http://*.xkcd.com/*",
-			"http://*.awkwardzombie.com/*",
-			"http://*.oglaf.com/*",
-			"http://*.samandfuzzy.com/*",
-			"http://*.penny-arcade.com/*",
-			"http://*.lfgcomic.com/*",
-			"http://*.leasticoulddo.com/*",
-			"http://*.pvponline.com/*",
-			"http://*.misfile.com/*",
-			"http://*.girlswithslingshots.com/*",
-			"http://*.twolumps.net/*",
-			"http://*.chainsawsuit.com/*",
-			"http://*.direman.com/*",
-			"http://*.amultiverse.com/*",
-			"http://*.drmcninja.com/*",
-			"http://*.gunnerkrigg.com/*",
-			"http://*.candicomics.com/*",
-			"http://*.threepanelsoul.com/*",
-			"http://*.shortpacked.com/*",
-			"http://*.dumbingofage.com/*",
-			"http://*.ma3comic.com/*",
-			"http://*.buttersafe.com/*",
-			"http://*.dcisgoingtohell.com/*",
-			"http://twokinds.keenspot.com/*",
-			"http://*.dresdencodak.com/*",
-			"http://*.giantitp.com/*",
-			"http://*.wastedtalent.ca/*",
-			"http://*.darthsanddroids.net/*",
-			"http://*.phdcomics.com/*",
-			"http://*.octopuspie.com/*",
-			"http://*.feltonblack.com/*"
-		],
+		"matches" : ["<all_urls>"],
 		"js" : [
 			"wckf.js",
 			"jQuery.js"
@@ -57,5 +23,13 @@
 		"48": "icon-48.png",
 		"128": "icon-128.png"
 	},
-	"manifest_version": 2
+	"page_action": {
+		"default_title": "Keyboard Navigation is enabled!",
+		"default_icon": {
+			"19": "icon-19.png",
+			"38": "icon-38.png"
+		}
+	},
+	"manifest_version": 2,
+	"key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1zVWJr2t9WDhNPsdMwiMQnefiMB4IaH90AcfXX0ieySJnF6ozhklBKot1laoGNbnWsA9XksTPSLNXJEhcd4EJbQT6op4t/Ej1mz45fmXbZYMxGGbXn65Qa7YmWPwycJgz210SoGqYYJTOeExRWySOELBK2BF64mnV1RJqo/+YztoP34dVKI2ypK44fKSVJDdQTM2rSvN6M28GhH6uZFBD8NORNT+LM65KWzlSJX1riebKpqvtJ0BN93mASyY8+a3ErnY8HqGQIY1HZkNfJ2IApzhW0ZdOHfM24de9o78HuyfdbNHLblvvXfwdq7wH6Na0x8BkZR9a8D5C3Ypkcj3xQIDAQAB"
 }

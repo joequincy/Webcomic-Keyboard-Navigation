@@ -1,6 +1,24 @@
 var storage = chrome.storage.sync;
 var loadedSites = {};
 
+function loadSettings(){
+	var keys = [
+		"direction",
+		"pageAction"
+	]
+	storage.get(keys, function(items){
+		var f = document.forms[0].elements;
+		if(items.pageAction!="undefined"){
+			f.pageAction.checked = items.pageAction;
+		}
+		if(items.direction=="r"){
+			f.direction.value = "r";
+			f.forceDir.checked = true;
+		} else {
+			f.direction.value = "l";
+		}
+	});
+}
 function saveSettings(){
 	var f = document.forms[0].elements;
 	if(f.forceDir.checked){
@@ -8,12 +26,14 @@ function saveSettings(){
 	} else {
 		storage.remove('direction');
 	}
+	storage.set({'pageAction':f.pageAction.checked});
 }
 function factoryReset(){
 	if(confirm("This will reset all settings, including user-created site rules. Are you sure you want to continue?")){
 		storage.remove('version');
 		storage.remove('sites');
 		storage.remove('direction');
+		storage.remove('pageAction');
 		chrome.runtime.reload();
 	}
 }
@@ -128,3 +148,4 @@ document.getElementById('wckf-save').addEventListener('click',saveSettings);
 document.getElementById('wckf-factory').addEventListener('click',factoryReset);
 document.getElementById('wckf-addNew').addEventListener('click',addSite);
 loadSites();
+loadSettings();

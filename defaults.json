@@ -237,5 +237,14 @@
 				"next":"a#next"
 			}
 		}
+	},
+	"0.5":{
+		"thebookofbiff.com":{
+			"name":"Maximumble (and Minimumble)",
+			"shortcuts":{
+				"prev":"a.navi-prev",
+				"next":"a.navi-next"
+			}
+		}
 	}
 }
