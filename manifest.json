@@ -1,9 +1,12 @@
 {
-	"name" : "Webcomic Keyboard Navigation",
-	"description" : "Adds keyboard navigation to various webcomics.",
-	"version" : "0.5",
+	"name" : "__MSG_extName__",
+	"description" : "__MSG_extDesc__",
+	"version" : "0.6",
+	"default_locale" : "en",
 	"permissions" : [
-		"storage"
+		"storage",
+		"notifications",
+		"tabs"
 	],
 	"options_page" : "settings.html",
 	"background" : {
@@ -24,7 +27,7 @@
 		"128": "icon-128.png"
 	},
 	"page_action": {
-		"default_title": "Keyboard Navigation is enabled!",
+		"default_title": "__MSG_extIconHover__",
 		"default_icon": {
 			"19": "icon-19.png",
 			"38": "icon-38.png"

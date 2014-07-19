@@ -17,8 +17,8 @@ wckf = {
 	},
 	'apply':function(){
 		var storage = chrome.storage.sync;
-		storage.get('sites',function(items){
-			var stuff = items.sites;
+		storage.get(null,function(stuff){
+			var unbound = true;
 			for(var p in stuff){
 				var reg = new RegExp(wckf.escape(p)+"$");
 				if(reg.test(document.domain)){
@@ -29,11 +29,47 @@ wckf = {
 								wckf.direction.r = 37;
 							}
 						});
+						unbound = false;
 						wckf.bind(stuff[p]['shortcuts']);
 						storage.get('pageAction',function(items){
 							if(!items.pageAction==false){
 								chrome.runtime.sendMessage("show_page_action");
 							}
+						});
+					}
+				}
+			}
+			if(unbound){
+				var siteRules = $("var[wkn-title]")[0];
+				if(typeof(siteRules)!="undefined"){
+					var siteTitle = $(siteRules).attr("wkn-title");
+					var siteAddress = $(siteRules).attr("wkn-address");
+					var siteNext = $(siteRules).attr("wkn-next");
+					var sitePrev = $(siteRules).attr("wkn-prev");
+					if(typeof(siteTitle)!="undefined"&&typeof(siteAddress)!="undefined"){
+						var details = {
+							"type":"basic",
+							"title":chrome.i18n.getMessage("extName"),
+							"message":chrome.i18n.getMessage("notification"),
+							"iconUrl":"icon-128.png",
+							"buttons":[
+								{"title":"Accept"},
+								{"title":"Decline"}
+							],
+							"priority":2,
+							"eventTime":Date.now()+5000
+						}
+						var obj = {};
+						obj[siteAddress] = {
+							"name":siteTitle,
+							"shortcuts":{
+								"prev":sitePrev,
+								"next":siteNext
+							}
+						}
+						chrome.runtime.sendMessage({
+							"notification":details,
+							"details":obj
 						});
 					}
 				}

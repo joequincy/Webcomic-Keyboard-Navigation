@@ -1,0 +1,98 @@
+{
+	"extName":{
+		"message":"Webcomic Keyboard Navigation",
+		"description":"Name of the extension"
+	},
+	"extDesc":{
+		"message":"Adds keyboard navigation to various webcomics.",
+		"description":"Description of the extension"
+	},
+	"extIconHover":{
+		"message":"Keyboard Navigation is enabled!",
+		"description":"Mouse hover text for the Page Action"
+	},
+	"resetWarning":{
+		"message":"This will reset all settings, including user-created site rules. Are you sure you want to continue?",
+		"description":"Warning for factory reset"
+	},
+	"siteAddError":{
+		"message":"Both the comic's title and its URL are required!",
+		"description":"Error shown if user omits a site's title or URL"
+	},
+	"optionsPageTitle":{
+		"message":"WKN Options",
+		"description":"Title of the Options page"
+	},
+	"options":{
+		"message":"Options",
+		"description":"word"
+	},
+	"prev":{
+		"message":"Previous",
+		"description":"word"
+	},
+	"next":{
+		"message":"Next",
+		"description":"word"
+	},
+	"showIcon":{
+		"message":"Show icon in address bar when keyboard navigation is available?",
+		"description":"Promt to show icon"
+	},
+	"forceDirection":{
+		"message":"Force navigation direction?",
+		"description":"Prompt to force navigation direction"
+	},
+	"saveButton":{
+		"message":"Save",
+		"description":"Text for the button to save settings"
+	},
+	"resetButton":{
+		"message":"Reset to Defaults",
+		"description":"Text for the button to reset settings to defaults"
+	},
+	"freeNotice":{
+		"message":"This extension is free to use.",
+		"description":""
+	},
+	"donationPlea":{
+		"message":"If you're happy with this extension and would like to donate towards its maintenance and further development, please use the Paypal button below. Donations will allow me to develop and roll out new features, especially any that would require hosting a website.",
+		"description":"Request for donations"
+	},
+	"addSiteMessage":{
+		"message":"Add a new comic",
+		"description":""
+	},
+	"addSiteAddress":{
+		"message":"Site Address:",
+		"description":""
+	},
+	"addSiteName":{
+		"message":"Comic Title:",
+		"description":""
+	},
+	"addSitePrev":{
+		"message":"Previous:",
+		"description":""
+	},
+	"addSiteNext":{
+		"message":"Next:",
+		"description":""
+	},
+	"addButton":{
+		"message":"Add",
+		"description":"Text for the button to add a new site"
+	},
+	"changeButton":{
+		"message":"Change",
+		"description":"Text for the button to change an existing site"
+	},
+	"removeButton":{
+		"message":"Remove",
+		"description":"Text for the button to remove an existing site"
+	},
+	"notification":{
+		"message":"This site has provided a new rule for keyboard navigation. Would you like to add it?",
+		"description":""
+	}
+}
