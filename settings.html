@@ -47,13 +47,33 @@
 		section#wckf-main article:nth-of-type(even) {
 			background-color: #f4f4f4;
 			}
+		section#wckf-main article a:after {
+			display: inline-block;
+			background-image: url(newtab.png);
+			height: 10px;
+			width: 10px;
+			position: relative;
+			left: -50px;
+			content: "";
+			}
 		section#wckf-main article h1, section#wckf-sidebar h1 {
 			margin-bottom: 0px;
 			font-family: Tahoma, Geneva, sans-serif;
 			font-size: 18pt;
 			}
 		section#wckf-main article h1 {
+			background-repeat: no-repeat;
+			background-position-x: 100%;
+			padding-right: 54px;
+			display: inline-block;
 			margin-top: 0px;
+			color: #000000;
+			}
+		section#wckf-main article h1.ltr {
+			background-image: url(icon-29a.png);
+			}
+		section#wckf-main article h1.rtl {
+			background-image: url(icon-29b.png);
 			}
 		section#wckf-main article legend {
 			font-family: "Courier New", Courier, monospace;
@@ -79,11 +99,11 @@
 		<h1 i18n="options">Options</h1>
 		<article id="wckf-switches">
 			<fieldset>
-				<legend><span i18n="forceDirection">Force navigation direction?</span> <input type="checkbox" name="forceDir" /></legend>
-				<input type="radio" name="direction" value="l" />&#8592; <span i18n="prev">Previous</span> &mdash; <span i18n="next">Next</span> &#8594;<br>
-				<input type="radio" name="direction" value="r" />&#8592; <span i18n="next">Next</span> &mdash; <span i18n="prev">Previous</span> &#8594;
+				<legend><label for="forceDir" i18n="forceDirection">Force navigation direction? </label><input id="forceDir" type="checkbox" name="forceDir" /></legend>
+				<input id="fltr" type="radio" name="direction" value="ltr" /><label for="fltr">&#8592; <span i18n="prev">Previous</span> &mdash; <span i18n="next">Next</span> &#8594;</label><br>
+				<input id="frtl" type="radio" name="direction" value="rtl" /><label for="frtl">&#8592; <span i18n="next">Next</span> &mdash; <span i18n="prev">Previous</span> &#8594;</label>
 			</fieldset>
-			<span i18n="showIcon">Show icon in address bar when keyboard navigation is available?</span> <input type="checkbox" name="pageAction" />
+			<label for="pageAction" i18n="showIcon">Show icon in address bar when keyboard navigation is available? </label><input type="checkbox" name="pageAction" />
 		</article>
 		<input type="button" id="wckf-save" value="Save" i18n_value="saveButton" /><input type="button" id="wckf-factory" value="Reset to Defaults" i18n_value="resetButton" />
 		</form>
@@ -98,13 +118,14 @@
 	</section>
 	<section id="wckf-main">
 		<article>
-			<h1 i18n="addSiteMessage">Add a new comic</h1>
+			<h1 class="new" i18n="addSiteMessage">Add a new comic</h1>
 			<form name="newSite">
 				<ul>
 					<li><label i18n="addSiteAddress">Site Address:</label><input name="url" size=100 /></li>
 					<li><label i18n="addSiteName">Comic Title:</label><input name="name" size=100 /></li>
 					<li><label i18n="addSitePrev">Previous:</label><input name="prev" size=100 /></li>
 					<li><label i18n="addSiteNext">Next:</label><input name="next" size=100 /></li>
+					<li><label i18n="addSiteDirection">Direction:</label><input name="dir" type="radio" value="ltr" id="ltr" checked /><label for="ltr">Left to Right</label>&emsp;<input name="dir" type="radio" value="rtl" id="rtl" /><label for="rtl">Right to Left</label></li>
 				</ul>
 			</form>
 			<input id="wckf-addNew" type="button" value="Add" i18n_value="addButton" />
@@ -112,13 +133,14 @@
 	</section>
 	<template id="editSite">
 		<article id="article">
-			<h1></h1>
+			<a target="_blank"><h1></h1></a>
 			<legend></legend>
 			<form name="">
 				<ul>
 					<li><label i18n="addSitePrev">Previous:</label><input name="prev" size="100"></li>
 					<li><label i18n="addSiteNext">Next:</label><input name="next" size="100"></li>
 				</ul>
+				<input type="hidden" name="dir" />
 			</form>
 			<input type="button" value="Change">
 			<input type="button" value="Remove">

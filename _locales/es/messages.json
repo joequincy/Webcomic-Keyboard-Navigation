@@ -79,6 +79,10 @@
 		"message":"Próximo:",
 		"description":""
 	},
+	"addSiteDirection":{
+		"message":"Orden:",
+		"description":""
+	},
 	"addButton":{
 		"message":"Añadir",
 		"description":"Text for the button to add a new site"
@@ -93,6 +97,18 @@
 	},
 	"notification":{
 		"message":"Este sitio ha proporcionado una nueva regla para la navegación mediante teclado. ¿Te gustaría añadir que?",
+		"description":""
+	},
+	"dirHover":{
+		"message":"Arreglo es",
+		"description":""
+	},
+	"dirLtR":{
+		"message":"Izquierda a Derecha",
+		"description":""
+	},
+	"dirRtL":{
+		"message":"Derecha a Izquierda",
 		"description":""
 	}
 }

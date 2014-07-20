@@ -24,10 +24,11 @@ wckf = {
 				if(reg.test(document.domain)){
 					if(!(stuff[p].hasOwnProperty("path")) || document.location.pathname.indexOf(stuff[p]['path'])==0){
 						storage.get('direction',function(items){
-							if(items.direction=="r"){
-								wckf.direction.l = 39;
-								wckf.direction.r = 37;
-							}
+							if(typeof(items.direction)=="undefined"){
+								wckf.setDirection(stuff[p].dir);
+							} else {
+								wckf.setDirection(items.direction);
+							} 
 						});
 						unbound = false;
 						wckf.bind(stuff[p]['shortcuts']);
@@ -46,6 +47,7 @@ wckf = {
 					var siteAddress = $(siteRules).attr("wkn-address");
 					var siteNext = $(siteRules).attr("wkn-next");
 					var sitePrev = $(siteRules).attr("wkn-prev");
+					var siteDir = $(siteRules).attr("wkn-dir");
 					if(typeof(siteTitle)!="undefined"&&typeof(siteAddress)!="undefined"){
 						var details = {
 							"type":"basic",
@@ -67,6 +69,9 @@ wckf = {
 								"next":siteNext
 							}
 						}
+						if(siteDir=="rtl"){
+							obj[siteAddress]["dir"] = siteDir;
+						}
 						chrome.runtime.sendMessage({
 							"notification":details,
 							"details":obj
@@ -82,6 +87,15 @@ wckf = {
 	'direction':{
 		'l':37,
 		'r':39
+	},
+	'setDirection':function(dir){
+		if(dir=="rtl"){
+			wckf.direction.l = 39;
+			wckf.direction.r = 37;
+		} else {
+			wckf.direction.l = 37;
+			wckf.direction.r = 39;
+		}
 	}
 }
 wckf.apply();

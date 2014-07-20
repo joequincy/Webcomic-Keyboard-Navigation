@@ -79,6 +79,10 @@
 		"message":"Next:",
 		"description":""
 	},
+	"addSiteDirection":{
+		"message":"Direction:",
+		"description":""
+	},
 	"addButton":{
 		"message":"Add",
 		"description":"Text for the button to add a new site"
@@ -93,6 +97,18 @@
 	},
 	"notification":{
 		"message":"This site has provided a new rule for keyboard navigation. Would you like to add it?",
+		"description":""
+	},
+	"dirHover":{
+		"message":"Navigation is",
+		"description":""
+	},
+	"dirLtR":{
+		"message":"Left to Right",
+		"description":""
+	},
+	"dirRtL":{
+		"message":"Right to Left",
 		"description":""
 	}
 }

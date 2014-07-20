@@ -5,7 +5,7 @@ function loadDefaults(version){
 			mergeDefaults(xhr.response, items, version);
 		});
 	};
-	xhr.open("GET", chrome.extension.getURL('defaults.json'), true);
+	xhr.open("GET", chrome.extension.getURL('defaults.json')+"?"+(new Date()).getTime(), true);
 	xhr.responseType = "json";
 	xhr.send();
 }
@@ -47,8 +47,7 @@ function mergeDefaults(defaults, items, version){
 	userSettings.pageAction = pageAction;
 	chrome.storage.sync.set(userSettings);
 }
-
-chrome.runtime.onInstalled.addListener(function() {
+function doInstall(){
 	chrome.storage.sync.get('version',function(items){
 		if(items.version>0){
 			loadDefaults(items.version);
@@ -56,10 +55,17 @@ chrome.runtime.onInstalled.addListener(function() {
 			loadDefaults(0);
 		}
 	});
+}
+
+chrome.runtime.onInstalled.addListener(function() {
+	doInstall();
 });
-chrome.runtime.onMessage.addListener(function (message, sender) {
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	if (message == "show_page_action") {
 		chrome.pageAction.show(sender.tab.id);
+	} else if(message == "factoryReset"){
+		doInstall();
+		sendResponse("done");
 	} else if(message.notification){
 		function removeNotification(tabId, changes, tab){
 			chrome.notifications.clear("siteRule",function(yes){});
