@@ -497,5 +497,14 @@
 				"next":"div.c-nav li.c-nav-6>a"
 			}
 		}
+	},
+	"0.8":{
+		"d20monkey.com":{
+			"name":"D20 Monkey",
+			"shortcuts":{
+				"prev":".navi-prev",
+				"next":".navi-next"
+			}
+		}
 	}
 }
