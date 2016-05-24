@@ -1,114 +1,114 @@
-﻿{
-	"extName":{
-		"message":"Navegación por Tebeo con Teclado",
-		"description":"Name of the extension"
-	},
-	"extDesc":{
-		"message":"Añade navegación mediante el teclado a los cómics en Internet.",
-		"description":"Description of the extension"
-	},
-	"extIconHover":{
-		"message":"Navegación con Teclado está activado!",
-		"description":"Mouse hover text for the Page Action"
-	},
-	"resetWarning":{
-		"message":"Esto restablecerá toda la configuración, incluyendo reglas de sitio creados por el usuario. ¿Está seguro que desea continuar?",
-		"description":"Warning for factory reset"
-	},
-	"siteAddError":{
-		"message":"Se requiere tanto el título del cómic y su URL!",
-		"description":"Error shown if user omits a site's title or URL"
-	},
-	"optionsPageTitle":{
-		"message":"NTT Opciones",
-		"description":"Title of the Options page"
-	},
-	"options":{
-		"message":"Opciones",
-		"description":"word"
-	},
-	"prev":{
-		"message":"Anterior",
-		"description":"word"
-	},
-	"next":{
-		"message":"Próximo",
-		"description":"word"
-	},
-	"showIcon":{
-		"message":"¿Mostrar icono en la barra de dirección cuando la navegación teclado está disponible?",
-		"description":"Promt to show icon"
-	},
-	"forceDirection":{
-		"message":"¿Fuerza dirección de navegación?",
-		"description":"Prompt to force navigation direction"
-	},
-	"saveButton":{
-		"message":"Guardar",
-		"description":"Text for the button to save settings"
-	},
-	"resetButton":{
-		"message":"Restaurar a Default",
-		"description":"Text for the button to reset settings to defaults"
-	},
-	"freeNotice":{
-		"message":"Esta extensión es de uso gratuito.",
-		"description":""
-	},
-	"donationPlea":{
-		"message":"Si usted es feliz con esta extensión y quisiera donar para su mantenimiento y desarrollo adicional, por favor, utilice el botón de Paypal abajo. Donaciones me permitirán desarrollar e implantar nuevas características, especialmente cualquiera que requeriría alojar un sitio web.",
-		"description":"Request for donations"
-	},
-	"addSiteMessage":{
-		"message":"Añadir un cómic nuevo",
-		"description":""
-	},
-	"addSiteAddress":{
-		"message":"Dirección del sitio:",
-		"description":""
-	},
-	"addSiteName":{
-		"message":"Título del Cómic:",
-		"description":""
-	},
-	"addSitePrev":{
-		"message":"Anterior:",
-		"description":""
-	},
-	"addSiteNext":{
-		"message":"Próximo:",
-		"description":""
-	},
-	"addSiteDirection":{
-		"message":"Orden:",
-		"description":""
-	},
-	"addButton":{
-		"message":"Añadir",
-		"description":"Text for the button to add a new site"
-	},
-	"changeButton":{
-		"message":"Cambiar",
-		"description":"Text for the button to change an existing site"
-	},
-	"removeButton":{
-		"message":"Eliminar",
-		"description":"Text for the button to remove an existing site"
-	},
-	"notification":{
-		"message":"Este sitio ha proporcionado una nueva regla para la navegación mediante teclado. ¿Te gustaría añadir que?",
-		"description":""
-	},
-	"dirHover":{
-		"message":"Arreglo es",
-		"description":""
-	},
-	"dirLtR":{
-		"message":"Izquierda a Derecha",
-		"description":""
-	},
-	"dirRtL":{
-		"message":"Derecha a Izquierda",
-		"description":""
-	}
+{
+   "addButton": {
+      "description": "Text for the button to add a new site",
+      "message": "Añadir"
+   },
+   "addSiteAddress": {
+      "description": "",
+      "message": "Dirección del sitio:"
+   },
+   "addSiteDirection": {
+      "description": "",
+      "message": "Orden:"
+   },
+   "addSiteMessage": {
+      "description": "",
+      "message": "Añadir un cómic nuevo"
+   },
+   "addSiteName": {
+      "description": "",
+      "message": "Título del Cómic:"
+   },
+   "addSiteNext": {
+      "description": "",
+      "message": "Próximo:"
+   },
+   "addSitePrev": {
+      "description": "",
+      "message": "Anterior:"
+   },
+   "changeButton": {
+      "description": "Text for the button to change an existing site",
+      "message": "Cambiar"
+   },
+   "dirHover": {
+      "description": "",
+      "message": "Arreglo es"
+   },
+   "dirLtR": {
+      "description": "",
+      "message": "Izquierda a Derecha"
+   },
+   "dirRtL": {
+      "description": "",
+      "message": "Derecha a Izquierda"
+   },
+   "donationPlea": {
+      "description": "Request for donations",
+      "message": "Si usted es feliz con esta extensión y quisiera donar para su mantenimiento y desarrollo adicional, por favor, utilice el botón de Paypal abajo. Donaciones me permitirán desarrollar e implantar nuevas características, especialmente cualquiera que requeriría alojar un sitio web."
+   },
+   "extDesc": {
+      "description": "Description of the extension",
+      "message": "Añade navegación mediante el teclado a los cómics en Internet."
+   },
+   "extIconHover": {
+      "description": "Mouse hover text for the Page Action",
+      "message": "Navegación con Teclado está activado!"
+   },
+   "extName": {
+      "description": "Name of the extension",
+      "message": "Navegación por Tebeo con Teclado"
+   },
+   "forceDirection": {
+      "description": "Prompt to force navigation direction",
+      "message": "¿Fuerza dirección de navegación?"
+   },
+   "freeNotice": {
+      "description": "",
+      "message": "Esta extensión es de uso gratuito."
+   },
+   "next": {
+      "description": "word",
+      "message": "Próximo"
+   },
+   "notification": {
+      "description": "",
+      "message": "Este sitio ha proporcionado una nueva regla para la navegación mediante teclado. ¿Te gustaría añadir que?"
+   },
+   "options": {
+      "description": "word",
+      "message": "Opciones"
+   },
+   "optionsPageTitle": {
+      "description": "Title of the Options page",
+      "message": "NTT Opciones"
+   },
+   "prev": {
+      "description": "word",
+      "message": "Anterior"
+   },
+   "removeButton": {
+      "description": "Text for the button to remove an existing site",
+      "message": "Eliminar"
+   },
+   "resetButton": {
+      "description": "Text for the button to reset settings to defaults",
+      "message": "Restaurar a Default"
+   },
+   "resetWarning": {
+      "description": "Warning for factory reset",
+      "message": "Esto restablecerá toda la configuración, incluyendo reglas de sitio creados por el usuario. ¿Está seguro que desea continuar?"
+   },
+   "saveButton": {
+      "description": "Text for the button to save settings",
+      "message": "Guardar"
+   },
+   "showIcon": {
+      "description": "Promt to show icon",
+      "message": "¿Mostrar icono en la barra de dirección cuando la navegación teclado está disponible?"
+   },
+   "siteAddError": {
+      "description": "Error shown if user omits a site's title or URL",
+      "message": "Se requiere tanto el título del cómic y su URL!"
+   }
 }

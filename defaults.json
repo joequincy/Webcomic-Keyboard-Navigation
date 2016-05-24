@@ -2,27 +2,19 @@
 	"0.1":{
 		"sinfest.net":{
 			"name":"Sinfest",
-			"path":"/view.php",
 			"shortcuts":{
 				"prev":"img[src='../images/prev.gif']",
 				"next":"img[src='../images/next.gif']"
 			}
 		},
-		"www.cad-comic.com":{
+		"cad-comic.com":{
 			"name":"Ctrl-Alt-Del",
 			"shortcuts":{
 				"prev":"div.navigation>a.nav-back,a#cad-button-link",
 				"next":"div.navigation>a.nav-next"
 			}
 		},
-		"xkcd.com":{
-			"name":"XKCD",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"www.awkwardzombie.com":{
+		"awkwardzombie.com":{
 			"name":"Awkward Zombie",
 			"shortcuts":{
 				"prev":"img[alt='Previous Comic']",
@@ -52,12 +44,12 @@
 				"next":"a.btnNext"
 			}
 		},
-		"lfgcomic.com":{
+		"lfg.co":{
 			"name":"Looking For Group",
 			"path":"/page/",
 			"shortcuts":{
 				"prev":"div#comic-left>a",
-				"next":null
+				"next":"div#comic-right>a"
 			}
 		},
 		"leasticoulddo.com":{
@@ -81,48 +73,6 @@
 				"next":"div#navtop img[alt='Next Comic']"
 			}
 		},
-		"girlswithslingshots.com":{
-			"name":"Girls With Slingshots",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"twolumps.net":{
-			"name":"Two Lumps",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"chainsawsuit.com":{
-			"name":"chainsawsuit",
-			"shortcuts":{
-				"prev":"img[alt='previous']",
-				"next":"img[alt='next']"
-			}
-		},
-		"direman.com":{
-			"name":"Dave the Direman",
-			"shortcuts":{
-				"prev":"a:contains('Previous')",
-				"next":"a:contains('Next')"
-			}
-		},
-		"amultiverse.com":{
-			"name":"Scenes From A Multiverse",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
-		"drmcninja.com":{
-			"name":"Dr. McNinja",
-			"shortcuts":{
-				"prev":"a.prev",
-				"next":"a.next"
-			}
-		},
 		"gunnerkrigg.com":{
 			"name":"Gunnerkrigg Court",
 			"shortcuts":{
@@ -130,53 +80,11 @@
 				"next":"img[src='http://www.gunnerkrigg.com/images/next_a.jpg']"
 			}
 		},
-		"candicomics.com":{
-			"name":"Candi",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"threepanelsoul.com":{
-			"name":"Three Panel Soul",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"shortpacked.com":{
-			"name":"Shortpacked!",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"dumbingofage.com":{
-			"name":"Dumbing Of Age",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
 		"ma3comic.com":{
 			"name":"Ménage à 3",
 			"shortcuts":{
-				"prev":"img[alt='Previous comic']",
+				"prev":"a#cniprev,a#cndprev",
 				"next":"a#cndnext"
-			}
-		},
-		"buttersafe.com":{
-			"name":"Buttersafe",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"dcisgoingtohell.com":{
-			"name":"Darwin Carmichael Is Going To Hell",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
 			}
 		},
 		"twokinds.keenspot.com":{
@@ -190,7 +98,7 @@
 			"name":"Dresden Codak",
 			"shortcuts":{
 				"prev":"div#preview>a,div.menunav>a",
-				"next":"img[src='http://dresdencodak.com_m_next.png']"
+				"next":"div.menunav>a~a"
 			}
 		},
 		"giantitp.com":{
@@ -222,65 +130,14 @@
 				"prev":"img[src='images/prev_button.gif'],img[src='comics/images/prev_button.gif']",
 				"next":"img[src='images/next_button.gif']"
 			}
-		},
-		"octopuspie.com":{
-			"name":"octopus pie",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"feltonblack.com":{
-			"name":"Felton Black",
-			"shortcuts":{
-				"prev":"a#prev",
-				"next":"a#next"
-			}
-		}
-	},
-	"0.5":{
-		"thebookofbiff.com":{
-			"name":"Maximumble (and Minimumble)",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
 		}
 	},
 	"0.7":{
-		"navcomic.com":{
-			"name":"Not A Villain",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"grrlpowercomic.com":{
-			"name":"Grrl Power",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
 		"earthsongsaga.com":{
 			"name":"Earthsong",
 			"shortcuts":{
 				"prev":"li#previous>a,img[alt='Current Page']",
 				"next":"li#next>a"
-			}
-		},
-		"ballerinamafia.net":{
-			"name":"ballerinaMafia",
-			"shortcuts":{
-				"prev":"div.comicnav>a.prev",
-				"next":"div.comicnav>a.next"
-			}
-		},
-		"lothonline.com":{
-			"name":"The Chronicles of Loth",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
 			}
 		},
 		"dream-scar.net":{
@@ -312,13 +169,6 @@
 				"next":"div#bottomnav>a.forward"
 			}
 		},
-		"sandraandwoo.com":{
-			"name":"Sandra and Woo (also Gaia)",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
 		"girlgeniusonline.com":{
 			"name":"Girl Genius",
 			"shortcuts":{
@@ -340,41 +190,6 @@
 				"next":"div.nav>a:contains('Next')"
 			}
 		},
-		"kahmith.com":{
-			"name":"Shades of Gray",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
-		"housepetscomic.com":{
-			"name":"Housepets!",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
-		"flipside.keenspot.com":{
-			"name":"Flipside",
-			"shortcuts":{
-				"prev":"a[rel='prev'],a[href='http://flipside.keenspot.com/comic.php']",
-				"next":"a[rel='next']"
-			}
-		},
-		"androssianprophecy.com":{
-			"name":"The Androssian Prophecy",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
-		"wapsisquare.com":{
-			"name":"Wapsi Square",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
 		"dreamkeeperscomic.com":{
 			"name":"Dreamkeepers",
 			"path":"/GNSaga.php",
@@ -391,53 +206,11 @@
 				"next":"a>img[src='/images/DKsitebits/PRELUDEformat/parrow_right.jpg']"
 			}
 		},
-		"thebeastlegion.com":{
-			"name":"The Beast Legion",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
-		"betweenfailures.com":{
-			"name":"Between Failures",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"willsaveworldforgold.com":{
-			"name":"Will Save World for Gold",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
-		"mylifewithfel.com":{
-			"name":"My Live with Fel",
-			"shortcuts":{
-				"prev":"a[title='prev']",
-				"next":"a[title='next']"
-			}
-		},
-		"straysonline.com":{
-			"name":"Strays",
-			"shortcuts":{
-				"prev":"a.navi-prev,a>img[src='http://www.straysonline.com/images/latestpage2.gif']",
-				"next":"a.navi-next"
-			}
-		},
 		"nekothekitty.smackjeeves.com":{
 			"name":"Neko the Kitty",
 			"shortcuts":{
-				"prev":"a>img[src='http://www.nekothekitty.net/files/smallprev.png']",
-				"next":"a>img[src='http://www.nekothekitty.net/files/smallnext.png']"
-			}
-		},
-		"freefall.purrsia.com":{
-			"name":"Freefall",
-			"shortcuts":{
-				"prev":"a:contains('Previous')",
-				"next":"a:contains('Next')"
+				"prev":"nav#topnav>a~a",
+				"next":"nav#topnav>a~a~a"
 			}
 		},
 		"derelictcomic.com":{
@@ -447,35 +220,6 @@
 				"next":"a>img#image3"
 			}
 		},
-		"gocomics.com":{
-			"name":"Endtown",
-			"path":"/endtown",
-			"shortcuts":{
-				"prev":"div.feature a.prev",
-				"next":"div.feature a.next"
-			}
-		},
-		"beyondtheveilcomic.com":{
-			"name":"Beyond the Veil",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
-		"egscomic.com":{
-			"name":"El Goonish Shive",
-			"shortcuts":{
-				"prev":"a[rel='prev']",
-				"next":"a[rel='next']"
-			}
-		},
-		"sdamned.com":{
-			"name":"Slightly Damned",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
 		"feywinds.com":{
 			"name":"Fey Winds",
 			"shortcuts":{
@@ -483,27 +227,11 @@
 				"next":"a>img[src='navnext.png']"
 			}
 		},
-		"twogag.com":{
-			"name":"Two Guys and Guy",
-			"shortcuts":{
-				"prev":"a.navi-prev",
-				"next":"a.navi-next"
-			}
-		},
 		"spindrift-comic.com":{
 			"name":"Spindrift",
 			"shortcuts":{
-				"prev":"div.c-nav li.c-nav-5>a",
-				"next":"div.c-nav li.c-nav-6>a"
-			}
-		}
-	},
-	"0.8":{
-		"d20monkey.com":{
-			"name":"D20 Monkey",
-			"shortcuts":{
-				"prev":".navi-prev",
-				"next":".navi-next"
+				"prev":"div#c-nav li.c-nav-5>a",
+				"next":"div#c-nav li.c-nav-6>a"
 			}
 		}
 	}

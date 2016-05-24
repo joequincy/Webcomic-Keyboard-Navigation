@@ -1,8 +1,24 @@
-function loadDefaults(version){
+function installDefaults(){
+	/*  Restructuring for v1.0
+	    Defaults are now kept on local storage, and sync storage is only
+		used for user-created settings.
+	*/
 	var xhr = new XMLHttpRequest();
 	xhr.onload = function(){
-		chrome.storage.sync.get(null, function(items){
-			mergeDefaults(xhr.response, items, version);
+		var defaults = {
+			'version':chrome.app.getDetails().version
+		};
+		for(var i in xhr.response){
+			var j = xhr.response[i];
+			for(var k in j){
+				defaults[k] = j[k];
+			}
+		}
+		chrome.storage.local.set(defaults);
+		chrome.storage.sync.get('pageAction',function(items){
+			if(!items.hasOwnProperty('pageAction')){
+				chrome.storage.sync.set({'pageAction':true});
+			}
 		});
 	};
 	xhr.open("GET", chrome.extension.getURL('defaults.json')+"?"+(new Date()).getTime(), true);
@@ -10,61 +26,28 @@ function loadDefaults(version){
 	xhr.send();
 }
 
-function mergeDefaults(defaults, items, version){
-	/* Merges any new site settings without overwriting any user-created settings.
-	"defaults" example structure: {
-		"0.1" : {
-			"sinfest.net" : {
-				"name" : "Sinfest",
-				"path" : "/view.php",
-				"shortcuts" : {
-					"prev" : "img[src='../images/prev.gif']",
-					"next" : "img[src='../images/prev.gif']"
-				}
-			},...
-		},...
-	*/
-	var userSettings = {};
-	for(var i in items){
-		if(i!="version"&&i!="direction"&&i!="pageAction"){
-			userSettings[i] = items[i];
-		}
-	}
-	var pageAction = (typeof(items.pageAction)==undefined)?true:items.pageAction;
-	var currentVersion = "";
-	for(var i in defaults){
-		if(Number(i)>Number(version)){
-			var j = defaults[i];
-			for(var k in j){
-				if(!userSettings.hasOwnProperty(k)){
-					userSettings[k] = j[k];
-				}
-			}
-		}
-		currentVersion = i;
-	}
-	userSettings.version = currentVersion;
-	userSettings.pageAction = pageAction;
-	chrome.storage.sync.set(userSettings);
-}
-function doInstall(){
-	chrome.storage.sync.get('version',function(items){
-		if(items.version>0){
-			loadDefaults(items.version);
-		}else{
-			loadDefaults(0);
-		}
+function wipeSettings(){
+	chrome.storage.sync.clear(function(){
+		installDefaults();
 	});
 }
 
-chrome.runtime.onInstalled.addListener(function() {
-	doInstall();
+chrome.runtime.onInstalled.addListener(function(){
+	chrome.storage.sync.get('version',function(items){
+		if(items.version){
+			wipeSettings();
+		} else {
+			installDefaults();
+		}
+	});
 });
+
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
 	if (message == "show_page_action") {
 		chrome.pageAction.show(sender.tab.id);
+		chrome.pageAction.setTitle(sender.tab.id, chrome.i18n.getMessage("extIconHover"));
 	} else if(message == "factoryReset"){
-		doInstall();
+		wipeSettings();
 		sendResponse("done");
 	} else if(message.notification){
 		function removeNotification(tabId, changes, tab){
